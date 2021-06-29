@@ -1,0 +1,42 @@
+@import "maps";
+
+@each $text, $size in $texts {
+  #{$text} {
+    font-family: "Lato Thin", sans-serif;
+    font-size: $size;
+    font-weight: lighter;
+    &.font-weight-light {
+      font-family: "Lato Light", sans-serif;
+    }
+    &.font-weight-regular {
+      font-family: "Lato Regular", sans-serif;
+    }
+    &.font-weight-bold {
+      font-family: "Lato Bold", sans-serif;
+    }
+  }
+}
+
+@each $title, $size in $titles {
+  #{$title} {
+    position: relative;
+    font-family: "Lato Thin", sans-serif;
+    font-size: $size;
+    &.font-weight-light {
+      font-family: "Lato Light", sans-serif;
+    }
+    &.font-weight-bold {
+      font-family: "Lato Bold", sans-serif;
+    }
+    &::before {
+      display: block;
+      position: absolute;
+      left: 2%;
+      top: 95%;
+      width: 10%;
+      height: 2px;
+      background-color: #EA5573;
+      content: '';
+    }
+  }
+}
